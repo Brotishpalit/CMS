@@ -1,6 +1,7 @@
 import java.awt.*;
 import java.awt.event.*;
 
+import javax.naming.ldap.Rdn;
 import javax.swing.*;
 
 public class FrmAdmission2  implements WindowListener{
@@ -8,7 +9,9 @@ public class FrmAdmission2  implements WindowListener{
 	
 	JFrame frm;
 	
-	JButton btnSave, btnSearch,btnUpdate,btnClear;
+	JButton  btnSave, btnSearch,btnUpdate,btnClear;
+	
+	JRadioButton rdYes, rdNo;
 	
 	JLabel lblExam_pass,lblBoard_University,lblSchool_College,lblPassing_Year,lblDivision,lblPer_Mark,lblCourse_Name,
 	lblDuration,lblInstitute,lblYear,lblGrade,lbltech_Knowledge,lbllogo;
@@ -108,6 +111,24 @@ public class FrmAdmission2  implements WindowListener{
 		txtPer_Mark.setFont(f);
 		txtPer_Mark.setForeground(Color.BLACK);
 		frm.add(txtPer_Mark);
+		
+		lbltech_Knowledge=new JLabel("COMPUTER TECHNICAL KNOWLEDGE");
+		lbltech_Knowledge.setBounds(30,250, 200, 30);
+		lbltech_Knowledge.setFont(f);
+		lbltech_Knowledge.setForeground(Color.BLUE);
+		frm.add(lbltech_Knowledge);
+		
+		rdYes=new JRadioButton("YES");
+		rdYes.setBounds(240, 250, 50, 30);
+		rdYes.setFont(f);
+		rdYes.setForeground(Color.BLUE);
+		frm.add(rdYes);
+		
+		rdNo=new JRadioButton("NO");
+		rdNo.setBounds(300, 250, 150, 30);
+		rdNo.setFont(f);
+		rdNo.setForeground(Color.BLUE);
+		frm.add(rdNo);
 		
 		
 		frm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
