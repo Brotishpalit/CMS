@@ -29,7 +29,7 @@ public class FrmAdmission2  implements WindowListener{
 		
 		frm=new JFrame();
 		frm.setSize(850,700);
-		frm.setLocation(130, 0);
+		frm.setLocation(300,10);
 		frm.setResizable(false);
 		frm.setLayout(null);
 		
@@ -41,94 +41,130 @@ public class FrmAdmission2  implements WindowListener{
 		frm.add(lbllogo);
 		
 		lblExam_pass=new JLabel("EXAMINATION PASSED");
-		lblExam_pass.setBounds(30, 180, 135, 30);
+		lblExam_pass.setBounds(30, 220, 135, 30);
 		lblExam_pass.setFont(f);
 		lblExam_pass.setForeground(Color.BLUE);
 		frm.add(lblExam_pass);
 		
 		txtExam_pass=new JTextField();
-		txtExam_pass.setBounds(30, 210,135,30);
+		txtExam_pass.setBounds(30, 250,135,30);
+		txtExam_pass.setFont(f);
+		txtExam_pass.setForeground(Color.BLACK);
+		frm.add(txtExam_pass);
+		
+		txtExam_pass=new JTextField();
+		txtExam_pass.setBounds(30, 280,135,30);
 		txtExam_pass.setFont(f);
 		txtExam_pass.setForeground(Color.BLACK);
 		frm.add(txtExam_pass);
 		
 		lblBoard_University=new JLabel(" BOARD/UNIVERSITY");
-		lblBoard_University.setBounds(165, 180, 130, 30);
+		lblBoard_University.setBounds(165, 220, 130, 30);
 		lblBoard_University.setFont(f);
 		lblBoard_University.setForeground(Color.BLUE);
 		frm.add(lblBoard_University);
 		
 		txtBoard_University=new JTextField();
-		txtBoard_University.setBounds(165, 210,130,30);
+		txtBoard_University.setBounds(165, 250,130,30);
+		txtBoard_University.setFont(f);
+		txtBoard_University.setForeground(Color.BLACK);
+		frm.add(txtBoard_University);
+		
+		txtBoard_University=new JTextField();
+		txtBoard_University.setBounds(165, 280,130,30);
 		txtBoard_University.setFont(f);
 		txtBoard_University.setForeground(Color.BLACK);
 		frm.add(txtBoard_University);
 		
 		lblSchool_College=new JLabel(" SCHOOL/COLLEGE");
-		lblSchool_College.setBounds(295, 180, 130, 30);
+		lblSchool_College.setBounds(295, 220, 130, 30);
 		lblSchool_College.setFont(f);
 		lblSchool_College.setForeground(Color.BLUE);
 		frm.add(lblSchool_College);
 		
 		txtSchool_College=new JTextField();
-		txtSchool_College.setBounds(295, 210,130,30);
+		txtSchool_College.setBounds(295, 250,130,30);
+		txtSchool_College.setFont(f);
+		txtSchool_College.setForeground(Color.BLACK);
+		frm.add(txtSchool_College);
+		
+		txtSchool_College=new JTextField();
+		txtSchool_College.setBounds(295, 280,130,30);
 		txtSchool_College.setFont(f);
 		txtSchool_College.setForeground(Color.BLACK);
 		frm.add(txtSchool_College);
 		
 		lblPassing_Year=new JLabel(" YEAR OF PASSING");
-		lblPassing_Year.setBounds(425, 180, 130, 30);
+		lblPassing_Year.setBounds(425,220, 130, 30);
 		lblPassing_Year.setFont(f);
 		lblPassing_Year.setForeground(Color.BLUE);
 		frm.add(lblPassing_Year);
 		
 		txtPassing_Year=new JTextField();
-		txtPassing_Year.setBounds(425, 210,130,30);
+		txtPassing_Year.setBounds(425, 250,130,30);
+		txtPassing_Year.setFont(f);
+		txtPassing_Year.setForeground(Color.BLACK);
+		frm.add(txtPassing_Year);
+		
+		txtPassing_Year=new JTextField();
+		txtPassing_Year.setBounds(425, 280,130,30);
 		txtPassing_Year.setFont(f);
 		txtPassing_Year.setForeground(Color.BLACK);
 		frm.add(txtPassing_Year);
 		
 		lblDivision=new JLabel("     DIVISION");
-		lblDivision.setBounds(555, 180, 130, 30);
+		lblDivision.setBounds(555, 220, 130, 30);
 		lblDivision.setFont(f);
 		lblDivision.setForeground(Color.BLUE);
 		frm.add(lblDivision);
 		
 		txtDivision=new JTextField();
-		txtDivision.setBounds(555, 210,130,30);
+		txtDivision.setBounds(555, 250,130,30);
+		txtDivision.setFont(f);
+		txtDivision.setForeground(Color.BLACK);
+		frm.add(txtDivision);
+		
+		txtDivision=new JTextField();
+		txtDivision.setBounds(555, 280,130,30);
 		txtDivision.setFont(f);
 		txtDivision.setForeground(Color.BLACK);
 		frm.add(txtDivision);
 		
 		lblPer_Mark=new JLabel("     %MARKS");
-		lblPer_Mark.setBounds(685, 180, 130, 30);
+		lblPer_Mark.setBounds(685, 220, 130, 30);
 		lblPer_Mark.setFont(f);
 		lblPer_Mark.setForeground(Color.BLUE);
 		frm.add(lblPer_Mark);
 		
 		txtPer_Mark=new JTextField();
-		txtPer_Mark.setBounds(685, 210,130,30);
+		txtPer_Mark.setBounds(685, 250,130,30);
+		txtPer_Mark.setFont(f);
+		txtPer_Mark.setForeground(Color.BLACK);
+		frm.add(txtPer_Mark);
+		
+		txtPer_Mark=new JTextField();
+		txtPer_Mark.setBounds(685, 280,130,30);
 		txtPer_Mark.setFont(f);
 		txtPer_Mark.setForeground(Color.BLACK);
 		frm.add(txtPer_Mark);
 		
 		lbltech_Knowledge=new JLabel("COMPUTER TECHNICAL KNOWLEDGE");
-		lbltech_Knowledge.setBounds(30,500, 200, 30);
+		lbltech_Knowledge.setBounds(30,320, 200, 30);
 		lbltech_Knowledge.setFont(f);
 		lbltech_Knowledge.setForeground(Color.BLUE);
 		frm.add(lbltech_Knowledge);
 		
-	/*	rdYes=new JRadioButton("YES");
-		rdYes.setBounds(240, 500, 50, 30);
+		rdYes=new JRadioButton("YES");
+		rdYes.setBounds(240,320, 50, 30);
 		rdYes.setFont(f);
 		rdYes.setForeground(Color.BLUE);
 		frm.add(rdYes);
 		
 		rdNo=new JRadioButton("NO");
-		rdNo.setBounds(300, 500, 150, 30);
+		rdNo.setBounds(300,320, 150, 30);
 		rdNo.setFont(f);
 		rdNo.setForeground(Color.BLUE);
-		frm.add(rdNo);*/
+		frm.add(rdNo);
 		
 		
 		frm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
