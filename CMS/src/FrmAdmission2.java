@@ -28,7 +28,7 @@ public class FrmAdmission2  implements WindowListener{
 		
 		
 		frm=new JFrame();
-		frm.setSize(900,600);
+		frm.setSize(850,700);
 		frm.setLocation(130, 0);
 		frm.setResizable(false);
 		frm.setLayout(null);
@@ -113,22 +113,22 @@ public class FrmAdmission2  implements WindowListener{
 		frm.add(txtPer_Mark);
 		
 		lbltech_Knowledge=new JLabel("COMPUTER TECHNICAL KNOWLEDGE");
-		lbltech_Knowledge.setBounds(30,250, 200, 30);
+		lbltech_Knowledge.setBounds(30,500, 200, 30);
 		lbltech_Knowledge.setFont(f);
 		lbltech_Knowledge.setForeground(Color.BLUE);
 		frm.add(lbltech_Knowledge);
 		
-		rdYes=new JRadioButton("YES");
-		rdYes.setBounds(240, 250, 50, 30);
+	/*	rdYes=new JRadioButton("YES");
+		rdYes.setBounds(240, 500, 50, 30);
 		rdYes.setFont(f);
 		rdYes.setForeground(Color.BLUE);
 		frm.add(rdYes);
 		
 		rdNo=new JRadioButton("NO");
-		rdNo.setBounds(300, 250, 150, 30);
+		rdNo.setBounds(300, 500, 150, 30);
 		rdNo.setFont(f);
 		rdNo.setForeground(Color.BLUE);
-		frm.add(rdNo);
+		frm.add(rdNo);*/
 		
 		
 		frm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
