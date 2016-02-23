@@ -3,6 +3,7 @@ import java.awt.event.*;
 
 import javax.naming.ldap.Rdn;
 import javax.swing.*;
+import javax.swing.text.MaskFormatter;
 
 public class FrmAdmission2  implements WindowListener{
 
@@ -13,17 +14,17 @@ public class FrmAdmission2  implements WindowListener{
 	
 	JRadioButton rdYes, rdNo;
 	
-	JLabel lblExam_pass,lblBoard_University,lblSchool_College,lblPassing_Year,
+	JLabel lblAddmission_no,lblExam_pass,lblBoard_University,lblSchool_College,lblPassing_Year,
 	lblDivision,lblPer_Mark,lblCourse_Name,lblDuration,lblInstitute,lblYear,
 	lblGrade,lblParents,lbltech_Knowledge,lbllogo,lblAcadmic_Record,
 	lblFather_Name,lblOccupation,lblAnnual_Income,lblMobile;
 
-	JTextField txtExam_pass,txtBoard_University,txtSchool_College,
+	JTextField txtAddmission_No,txtExam_pass,txtBoard_University,txtSchool_College,
 	txtPassing_Year,txtDivision,txtPer_Mark,txtCourse_Name,
 	txtDuration,txtInstitute,txtYear,txtGrade,txttech_Knowledge,
 	txtFather_Name,txtOccupation,txtAnnual_Income,txtMobile;
 
-	
+		
 	Font f=new Font("Consolas",Font.BOLD,13);
 	Image img=new ImageIcon(this.getClass().getResource("/banner.jpg")).getImage();
 		
@@ -48,6 +49,18 @@ public class FrmAdmission2  implements WindowListener{
 		lblAcadmic_Record.setFont(f);
 		lblAcadmic_Record.setForeground(Color.DARK_GRAY);
 		frm.add(lblAcadmic_Record);
+		
+		lblAddmission_no=new JLabel("ADDMISSION No");
+		lblAddmission_no.setBounds(530,180,150, 30);
+		lblAddmission_no.setFont(f);
+		lblAddmission_no.setForeground(Color.BLUE);
+		frm.add(lblAddmission_no);
+		
+		txtAddmission_No=new JTextField();
+		txtAddmission_No.setBounds(670, 180,150,30);
+		txtAddmission_No.setFont(f);
+		txtAddmission_No.setForeground(Color.BLACK);
+		frm.add(txtAddmission_No);
 		
 		lblExam_pass=new JLabel("EXAMINATION PASSED");
 		lblExam_pass.setBounds(30, 220, 135, 30);
@@ -308,14 +321,6 @@ public class FrmAdmission2  implements WindowListener{
 		txtAnnual_Income.setForeground(Color.BLACK);
 		frm.add(txtAnnual_Income);
 		
-		
-		/*txtGrade=new JTextField();
-		txtGrade.setBounds(30,490,115,30);
-		txtGrade.setFont(f);
-		txtGrade.setForeground(Color.BLACK);
-		frm.add(txtGrade);*/
-		
-
 		
 		
 		

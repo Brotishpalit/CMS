@@ -3,10 +3,16 @@
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Image;
+
 import javax.swing.*;
+import javax.swing.text.MaskFormatter;
+
 import java.awt.event.*;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 public class FrmEnquiry implements WindowListener,ActionListener{
 	JFrame frm;
@@ -21,6 +27,9 @@ public class FrmEnquiry implements WindowListener,ActionListener{
 	
 	JComboBox cmbGender, cmbWorking, cmbMode, cmbUniversity, cmbSource_of_Information;
 		
+	JFormattedTextField curdate;
+	MaskFormatter mf1,mf2,mf3;
+	
 	JTextArea txtFull_Address;
 	
 	String arr[]={" MALE"," FEMALE"};
@@ -67,12 +76,22 @@ public FrmEnquiry () {
 		lblDate.setForeground(Color.BLUE );
 		frm.add(lblDate);
 		
-		txtDate=new JTextField();
-		txtDate.setBounds(570, 180, 250, 30);
-		txtDate.setFont(f);
-		txtDate.setForeground(Color.BLACK);
-		txtDate.setToolTipText(getLabelText("Insert Current Date [DD-MM-YY]"));
-		frm.add(txtDate);
+String timestamp=new SimpleDateFormat("dd/MMM/yyyy").format(Calendar.getInstance().getTime());
+		
+		try {
+			mf1=new MaskFormatter("  ##/UUU/#### ");
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		mf1.setPlaceholderCharacter('_');
+		curdate=new JFormattedTextField(mf1);
+		curdate.setBounds(570, 180, 250, 30);
+		curdate.setFont(f);
+		curdate.setForeground(Color.BLACK );
+		curdate.setText(timestamp);
+		curdate.setEditable(true);
+		frm.add(curdate);
 		
 		lblStudent_Name=new JLabel("STUDENT NAME");
 		lblStudent_Name.setBounds(20, 220, 100, 30);
@@ -200,23 +219,38 @@ public FrmEnquiry () {
 		lblParents_Mob.setForeground(Color.BLUE );
 		frm.add(lblParents_Mob);
 		
-		txtParents_Mob=new JTextField();
-		txtParents_Mob.setBounds(150, 460, 250, 30);
-		txtParents_Mob.setFont(f);
-		txtParents_Mob.setToolTipText(getLabelText("Your Parents Contact No"));
-		frm.add(txtParents_Mob);
+		try {
+			mf2=new MaskFormatter("(+##) ##########");
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		curdate.setForeground(Color.BLACK );
+		curdate=new JFormattedTextField(mf2);
+		curdate.setBounds(150, 460, 250, 30);
+		curdate.setToolTipText(getLabelText("Your Parents Contact No"));
+		curdate.setFont(f);
+		frm.add(curdate);
 		
+				
 		lblStudent_Mob=new JLabel("STUDENT MOB");
 		lblStudent_Mob.setBounds(440, 460, 100, 30);
 		lblStudent_Mob.setFont(f);
 		lblStudent_Mob.setForeground(Color.BLUE );
 		frm.add(lblStudent_Mob);
 		
-		txtStudent_Mob=new JTextField();
-		txtStudent_Mob.setBounds(580, 460, 240, 30);
-		txtStudent_Mob.setFont(f);
-		txtStudent_Mob.setToolTipText(getLabelText("Your Contact No"));
-		frm.add(txtStudent_Mob);
+		try {
+			mf2=new MaskFormatter("(+##) ##########");
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		curdate.setForeground(Color.BLACK );
+		curdate=new JFormattedTextField(mf2);
+		curdate.setToolTipText(getLabelText("Your Contact No"));
+		curdate.setBounds(580, 460, 240, 30);
+		curdate.setFont(f);
+		frm.add(curdate);
 		
 		lblMode=new JLabel("MODE");
 		lblMode.setBounds(20, 500, 200, 30);
