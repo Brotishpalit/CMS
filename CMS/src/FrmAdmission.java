@@ -365,7 +365,7 @@ public class FrmAdmission  implements WindowListener,ActionListener{
 		frm.add(txtFamialy_Income);
 		
 		btnNext=new JButton("NEXT");
-		btnNext.setBounds(150, 660, 120, 40);
+		btnNext.setBounds(220, 660, 500, 40);
 		btnNext.setFont(f);
 		btnNext.setForeground(Color.BLUE );
 		frm.add(btnNext);
