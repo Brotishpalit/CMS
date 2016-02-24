@@ -33,7 +33,7 @@ public class FrmAdmission2  implements WindowListener,ActionListener {
 		
 		frm=new JFrame();
 		frm.setSize(850,700);
-		frm.setLocation(300,10);
+		frm.setLocation(250,10);
 		frm.setResizable(false);
 		frm.setLayout(null);
 		Color hexa=Color.decode("#F7AC8F");
@@ -324,9 +324,7 @@ public class FrmAdmission2  implements WindowListener,ActionListener {
 		txtAnnual_Income.setForeground(Color.BLACK);
 		frm.add(txtAnnual_Income);
 		
-		
-		
-		
+			
 		rdYes=new JRadioButton("YES");
 		rdYes.setBounds(240,320, 50, 30);
 		rdYes.setFont(f);
