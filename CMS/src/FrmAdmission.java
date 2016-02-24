@@ -10,7 +10,7 @@ import javax.swing.text.MaskFormatter;
 public class FrmAdmission  implements WindowListener,ActionListener{
 
 	JFrame frm;
-	JButton btnSave, btnUploade;
+	JButton btnNext, btnUploade;
 	
 	JLabel lblEnquiry_Id,lblAdmission_No,lblReligion,lblCategory,lblMartial,lblSemester,lblNationality,
 	lblCourse_Title,lblStudent_Name, lblFather_Name, lblDOB, lblAge, lblQualifaction,lblPercentage, lblGender, 
@@ -51,6 +51,8 @@ public class FrmAdmission  implements WindowListener,ActionListener{
 		frm.setLocation(130, 0);
 		frm.setResizable(false);
 		frm.setLayout(null);
+		Color hexa=Color.decode("#F7AC8F");
+		frm.getContentPane().setBackground(hexa);
 		
 		frm.setTitle("ADMISSION FORM");
 		
@@ -292,7 +294,7 @@ public class FrmAdmission  implements WindowListener,ActionListener{
 		frm.add(lblParents_Mob);
 		
 		
-		mf3=new MaskFormatter("(+##) ##########");
+		mf3=new MaskFormatter("(+91) ##########");
 		curdate.setForeground(Color.BLACK );
 		curdate=new JFormattedTextField(mf3);
 		curdate.setBounds(150, 540, 250, 30);
@@ -306,7 +308,7 @@ public class FrmAdmission  implements WindowListener,ActionListener{
 		lblStudent_Mob.setForeground(Color.BLUE );
 		frm.add(lblStudent_Mob);
 	
-		mf2=new MaskFormatter("(+##) ##########");
+		mf2=new MaskFormatter("(+91) ##########");
 		curdate.setForeground(Color.BLACK );
 		curdate=new JFormattedTextField(mf2);
 		curdate.setBounds(600, 540, 240, 30);
@@ -362,12 +364,12 @@ public class FrmAdmission  implements WindowListener,ActionListener{
 		txtFamialy_Income.setForeground(Color.BLACK );
 		frm.add(txtFamialy_Income);
 		
-		btnSave=new JButton("NEXT");
-		btnSave.setBounds(150, 660, 120, 40);
-		btnSave.setFont(f);
-		btnSave.setForeground(Color.BLUE );
-		frm.add(btnSave);
-		btnSave.addActionListener(this);
+		btnNext=new JButton("NEXT");
+		btnNext.setBounds(150, 660, 120, 40);
+		btnNext.setFont(f);
+		btnNext.setForeground(Color.BLUE );
+		frm.add(btnNext);
+		btnNext.addActionListener(this);
 		
 	
 

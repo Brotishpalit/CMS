@@ -5,7 +5,7 @@ import javax.naming.ldap.Rdn;
 import javax.swing.*;
 import javax.swing.text.MaskFormatter;
 
-public class FrmAdmission2  implements WindowListener{
+public class FrmAdmission2  implements WindowListener,ActionListener {
 
 	
 	JFrame frm;
@@ -36,6 +36,8 @@ public class FrmAdmission2  implements WindowListener{
 		frm.setLocation(300,10);
 		frm.setResizable(false);
 		frm.setLayout(null);
+		Color hexa=Color.decode("#F7AC8F");
+		frm.getContentPane().setBackground(hexa);
 		
 		frm.setTitle("ADMISSION FORM2");
 	
@@ -44,6 +46,7 @@ public class FrmAdmission2  implements WindowListener{
 		lbllogo.setIcon(new ImageIcon(img));
 		frm.add(lbllogo);
 		
+			
 		lblAcadmic_Record=new JLabel("ACCADMIC RECORD [MINIMUM QUALIFACTION: INTERMEDIATE /+2");
 		lblAcadmic_Record.setBounds(30,190,500, 30);
 		lblAcadmic_Record.setFont(f);
@@ -331,10 +334,40 @@ public class FrmAdmission2  implements WindowListener{
 		frm.add(rdYes);
 		
 		rdNo=new JRadioButton("NO");
-		rdNo.setBounds(300,320, 150, 30);
+		rdNo.setBounds(300,320,50, 30);
 		rdNo.setFont(f);
 		rdNo.setForeground(Color.BLUE);
 		frm.add(rdNo);
+		
+		btnSave=new JButton("SAVE");
+		btnSave.setBounds(30, 600, 130, 40);
+		btnSave.setFont(f);
+		btnSave.setForeground(Color.BLUE );
+		frm.add(btnSave);
+		btnSave.addActionListener(this);
+		
+		btnSearch=new JButton("SEARCH");
+		btnSearch.setBounds(230, 600, 130, 40);
+		btnSearch.setFont(f);
+		btnSearch.setForeground(Color.BLUE );
+		frm.add(btnSearch);
+		btnSearch.addActionListener(this);
+		
+		btnUpdate=new JButton("UPDATE");
+		btnUpdate.setBounds(430, 600, 130, 40);
+		btnUpdate.setFont(f);
+		btnUpdate.setForeground(Color.BLUE );
+		frm.add(btnUpdate);
+		btnUpdate.addActionListener(this);
+		
+		
+		btnClear=new JButton("CLEAR");
+		btnClear.setBounds(630, 600, 130, 40);
+		btnClear.setFont(f);
+		btnClear.setForeground(Color.BLUE );
+		frm.add(btnClear);
+		btnUpdate.addActionListener(this);
+		
 		
 		
 		frm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -386,6 +419,12 @@ public class FrmAdmission2  implements WindowListener{
 
 	@Override
 	public void windowOpened(WindowEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
 		
 	}

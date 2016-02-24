@@ -53,7 +53,8 @@ public FrmEnquiry () {
 		frm.setResizable(false);
 		frm.setLayout(null);
 		frm.setTitle("Enquiry");
-		frm.setBackground(Color.blue);
+		Color hexa=Color.decode("#F7AC8F");
+		frm.getContentPane().setBackground(hexa);
 		frm.addWindowListener(this);
 		
 		lblEnquiry_Id=new JLabel("ENQUIRY ID");
@@ -220,7 +221,7 @@ String timestamp=new SimpleDateFormat("dd/MMM/yyyy").format(Calendar.getInstance
 		frm.add(lblParents_Mob);
 		
 		try {
-			mf2=new MaskFormatter("(+##) ##########");
+			mf2=new MaskFormatter("(+91) ##########");
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -240,7 +241,7 @@ String timestamp=new SimpleDateFormat("dd/MMM/yyyy").format(Calendar.getInstance
 		frm.add(lblStudent_Mob);
 		
 		try {
-			mf2=new MaskFormatter("(+##) ##########");
+			mf2=new MaskFormatter("(+91) ##########");
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
