@@ -10,9 +10,11 @@ public class FrmAdmission2  implements WindowListener,ActionListener {
 	
 	JFrame frm;
 	
-	JButton  btnSave, btnSearch,btnUpdate,btnClear;
+	JButton  btnSave, btnSearch,btnUpdate,btnClear,btnDelete;
 	
 	JRadioButton rdYes, rdNo;
+	
+	ButtonGroup group;
 	
 	JLabel lblAddmission_no,lblExam_pass,lblBoard_University,lblSchool_College,lblPassing_Year,
 	lblDivision,lblPer_Mark,lblCourse_Name,lblDuration,lblInstitute,lblYear,
@@ -324,17 +326,19 @@ public class FrmAdmission2  implements WindowListener,ActionListener {
 		txtAnnual_Income.setForeground(Color.BLACK);
 		frm.add(txtAnnual_Income);
 		
-			
+		group= new ButtonGroup();
 		rdYes=new JRadioButton("YES");
 		rdYes.setBounds(240,320, 50, 30);
 		rdYes.setFont(f);
 		rdYes.setForeground(Color.BLUE);
+		group.add(rdYes);
 		frm.add(rdYes);
 		
 		rdNo=new JRadioButton("NO");
 		rdNo.setBounds(300,320,50, 30);
 		rdNo.setFont(f);
 		rdNo.setForeground(Color.BLUE);
+		group.add(rdNo);
 		frm.add(rdNo);
 		
 		btnSave=new JButton("SAVE");
@@ -345,14 +349,14 @@ public class FrmAdmission2  implements WindowListener,ActionListener {
 		btnSave.addActionListener(this);
 		
 		btnSearch=new JButton("SEARCH");
-		btnSearch.setBounds(230, 600, 130, 40);
+		btnSearch.setBounds(200, 600, 130, 40);
 		btnSearch.setFont(f);
 		btnSearch.setForeground(Color.BLUE );
 		frm.add(btnSearch);
 		btnSearch.addActionListener(this);
 		
 		btnUpdate=new JButton("UPDATE");
-		btnUpdate.setBounds(430, 600, 130, 40);
+		btnUpdate.setBounds(360, 600, 130, 40);
 		btnUpdate.setFont(f);
 		btnUpdate.setForeground(Color.BLUE );
 		frm.add(btnUpdate);
@@ -360,11 +364,18 @@ public class FrmAdmission2  implements WindowListener,ActionListener {
 		
 		
 		btnClear=new JButton("CLEAR");
-		btnClear.setBounds(630, 600, 130, 40);
+		btnClear.setBounds(520, 600, 130, 40);
 		btnClear.setFont(f);
 		btnClear.setForeground(Color.BLUE );
 		frm.add(btnClear);
-		btnUpdate.addActionListener(this);
+		btnClear.addActionListener(this);
+		
+		btnDelete=new JButton("DELETE");
+		btnDelete.setBounds(680, 600, 130, 40);
+		btnDelete.setFont(f);
+		btnDelete.setForeground(Color.BLUE );
+		frm.add(btnDelete);
+		btnDelete.addActionListener(this);
 		
 		
 		

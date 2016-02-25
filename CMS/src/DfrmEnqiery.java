@@ -3,6 +3,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import javax.swing.JOptionPane;
+
 public class DfrmEnqiery extends Connections {
   PreparedStatement ps;
   ResultSet rs;
@@ -70,6 +72,21 @@ public class DfrmEnqiery extends Connections {
 		try {
 			ps=conn.prepareStatement(Sql);
 			rs=ps.executeQuery();
+			/*while(rs.next()){
+			JOptionPane.showMessageDialog(null, rs.getString(1));
+			JOptionPane.showMessageDialog(null, rs.getString(2));
+			JOptionPane.showMessageDialog(null, rs.getString(3));
+			JOptionPane.showMessageDialog(null, rs.getString(4));
+			JOptionPane.showMessageDialog(null, rs.getString(5));
+			JOptionPane.showMessageDialog(null, rs.getString(6));
+			JOptionPane.showMessageDialog(null, rs.getString(7));
+			JOptionPane.showMessageDialog(null, rs.getString(8));
+			JOptionPane.showMessageDialog(null, rs.getString(9));
+			JOptionPane.showMessageDialog(null, rs.getString(10));
+			JOptionPane.showMessageDialog(null, rs.getString(11));
+			JOptionPane.showMessageDialog(null, rs.getString(12));
+			JOptionPane.showMessageDialog(null, rs.getString(13));*/
+			//}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

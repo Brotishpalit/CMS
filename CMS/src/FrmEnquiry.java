@@ -1,5 +1,4 @@
 
-
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Image;
@@ -16,7 +15,7 @@ import java.util.Calendar;
 
 public class FrmEnquiry implements WindowListener,ActionListener{
 	JFrame frm;
-	JButton btnNew, btnUpdate, btnSearch, btnClear;
+	JButton btnNew, btnUpdate, btnSearch, btnClear,btnDelete;
 	
 	JLabel lblEnquiry_Id,lblStudent_Name, lblFather_Name, lblDOB, lblAge, lblQualifaction,lblPercentage, lblGender, 
 	lblWorking, lblFull_Address, lblParents_Mob, lblStudent_Mob, lblEmailId, lblMode, 
@@ -304,32 +303,40 @@ String timestamp=new SimpleDateFormat("dd/MMM/yyyy").format(Calendar.getInstance
 		frm.add(txtCourse_Interested);
 		
 		btnNew=new JButton("NEW");
-		btnNew.setBounds(150, 580, 120, 40);
+		btnNew.setBounds(50, 600, 120, 40);
 		btnNew.setFont(f);
 		btnNew.setForeground(Color.BLUE );
 		frm.add(btnNew);
 		btnNew.addActionListener(this);
 		
 		btnUpdate=new JButton("EDIT");
-		btnUpdate.setBounds(320, 580, 120, 40);
+		btnUpdate.setBounds(200, 600, 120, 40);
 		btnUpdate.setFont(f);
 		btnUpdate.setForeground(Color.BLUE );
 		frm.add(btnUpdate);
 		btnUpdate.addActionListener(this);
 		
 		btnSearch=new JButton("SEARCH");
-		btnSearch.setBounds(510, 580, 120, 40);
+		btnSearch.setBounds(350, 600, 120, 40);
 		btnSearch.setFont(f);
 		frm.add(btnSearch);
 		btnSearch.setForeground(Color.BLUE );
 		btnSearch.addActionListener(this);
 		
 		btnClear=new JButton("CLEAR");
-		btnClear.setBounds(700, 580, 120, 40);
+		btnClear.setBounds(500, 600, 120, 40);
 		btnClear.setFont(f);
 		frm.add(btnClear);
 		btnClear.setForeground(Color.BLUE );
 		btnClear.addActionListener(this);
+		
+		
+		btnDelete=new JButton("DELETE");
+		btnDelete.setBounds(650, 600, 120, 40);
+		btnDelete.setFont(f);
+		frm.add(btnDelete);
+		btnDelete.setForeground(Color.BLUE );
+		btnDelete.addActionListener(this);
 		
 		lbllogo=new JLabel();
 		lbllogo.setBounds(20, 5, 850, 165);
@@ -449,11 +456,11 @@ public void setEditable()
 	txtParents_Mob.setEditable(true);
 	txtStudent_Mob.setEditable(true);
 	txtCourse_Interested.setEditable(true);
-	/*cmbGender.setSelectedIndex(-1);
+	cmbGender.setSelectedIndex(-1);
 	cmbWorking.setSelectedIndex(-1);
 	cmbMode.setSelectedIndex(-1);
 	cmbUniversity.setSelectedIndex(-1);
-	cmbSource_of_Information.setSelectedIndex(-1);*/
+	cmbSource_of_Information.setSelectedIndex(-1);
 	cmbGender.setEnabled(true);
 	cmbWorking.setEnabled(true);
 	cmbMode.setEnabled(true);
@@ -619,4 +626,3 @@ public void actionPerformed(ActionEvent e) {
 }
 
 }
-
