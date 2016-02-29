@@ -486,14 +486,14 @@ public void actionPerformed(ActionEvent e) {
 			btnSearch.setText("SEARCH");
 		}else if(btnNew.getText().equals("SAVE")){
 			DfrmEnqiery enq=new DfrmEnqiery();
-			int s=enq.ins_record(Integer.parseInt(txtEnquiry_Id.getText()), txtStudent_Name.getText(), txtFather_Name.getText(), txtDOB.getText(), txtAge.getText(), txtQualifaction.getText(), Integer.parseInt(txtPercentage.getText()), cmbGender.getSelectedItem().toString(), cmbWorking.getSelectedItem().toString(),txtFull_Address.getText(), txtParents_Mob.getText(), txtStudent_Mob.getText(), cmbUniversity.getSelectedItem().toString(), txtEmailId.getText(), txtCourse_Interested.getText(), cmbMode.getSelectedItem().toString(), cmbSource_of_Information.getSelectedItem().toString(), txtDate.getText());
+		/*	int s=enq.ins_record(Integer.parseInt(txtEnquiry_Id.getText()), txtStudent_Name.getText(), txtFather_Name.getText(), txtDOB.getText(), txtAge.getText(), txtQualifaction.getText(), Integer.parseInt(txtPercentage.getText()), cmbGender.getSelectedItem().toString(), cmbWorking.getSelectedItem().toString(),txtFull_Address.getText(), txtParents_Mob.getText(), txtStudent_Mob.getText(), cmbUniversity.getSelectedItem().toString(), txtEmailId.getText(), txtCourse_Interested.getText(), cmbMode.getSelectedItem().toString(), cmbSource_of_Information.getSelectedItem().toString(), txtDate.getText());
 			if(s==1){
 				JOptionPane.showMessageDialog(null, "SUCESSFULLY INSERTED");
 				clear();
 				txtEnquiry_Id.setText(Integer.toString(enq.getenqnumber()));
 			}else{
 				JOptionPane.showMessageDialog(null, "not INSERTED");
-			}
+			}*/
 		}
 		
 	}else if(e.getSource().equals(btnUpdate)){
@@ -503,14 +503,14 @@ public void actionPerformed(ActionEvent e) {
 			btnUpdate.setText("UPDATE");
 		}else if(e.getActionCommand().equalsIgnoreCase("UPDATE")){
 			DfrmEnqiery enq=new DfrmEnqiery();
-			int s=enq.update_record(Integer.parseInt(txtEnquiry_Id.getText()), txtStudent_Name.getText(), txtFather_Name.getText(), txtDOB.getText(), txtAge.getText(), txtQualifaction.getText(), Integer.parseInt(txtPercentage.getText()), cmbGender.getSelectedItem().toString(), cmbWorking.getSelectedItem().toString(),txtFull_Address.getText(), txtParents_Mob.getText(), txtStudent_Mob.getText(), cmbUniversity.getSelectedItem().toString(), txtEmailId.getText(), txtCourse_Interested.getText(), cmbMode.getSelectedItem().toString(), cmbSource_of_Information.getSelectedItem().toString(), txtDate.getText());
+		/*	int s=enq.update_record(Integer.parseInt(txtEnquiry_Id.getText()), txtStudent_Name.getText(), txtFather_Name.getText(), txtDOB.getText(), txtAge.getText(), txtQualifaction.getText(), Integer.parseInt(txtPercentage.getText()), cmbGender.getSelectedItem().toString(), cmbWorking.getSelectedItem().toString(),txtFull_Address.getText(), txtParents_Mob.getText(), txtStudent_Mob.getText(), cmbUniversity.getSelectedItem().toString(), txtEmailId.getText(), txtCourse_Interested.getText(), cmbMode.getSelectedItem().toString(), cmbSource_of_Information.getSelectedItem().toString(), txtDate.getText());
 			if(s==1){
 				JOptionPane.showMessageDialog(null, "SUCESSFULLY updated");
 				clear();
 				txtEnquiry_Id.setText(Integer.toString(enq.getenqnumber()));
 			}else{
 				JOptionPane.showMessageDialog(null, "NOT updated");
-			}
+			}*/
 			//JOptionPane.showMessageDialog(null, "UPDATE ");	
 		}		
 		

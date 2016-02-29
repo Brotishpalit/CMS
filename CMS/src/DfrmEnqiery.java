@@ -3,8 +3,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import javax.swing.JOptionPane;
-
 public class DfrmEnqiery extends Connections {
   PreparedStatement ps;
   ResultSet rs;
@@ -32,7 +30,9 @@ public class DfrmEnqiery extends Connections {
 		}
 		return result+1;
 	}
-	public int ins_record(int enqNO,String name,String father_name,String DOB,String age,String quallifcation,int percent,String gender,String working,String add,String p_mobnum,String st_num,String university,String email,String inst_course,String Smode,String source,String date){
+	public int ins_record(int enqNO,String name,String father_name,String DOB,int age,String quallifcation,
+			double percent,String gender,String working,String add,String p_mobnum,String st_num,String university,
+			String email,String inst_course,String Smode,String source,String date){
 		String sql="insert into student_enquery values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 		int status=0;
 		conn=Connections.getConnections();
@@ -42,9 +42,9 @@ public class DfrmEnqiery extends Connections {
 			ps.setString(2, name);
 			ps.setString(3, father_name);
 			ps.setString(4, DOB);
-			ps.setString(5, age);
+			ps.setInt(5, age);
 			ps.setString(6, quallifcation);
-			ps.setInt(7, percent);
+			ps.setDouble(7, percent);
 			ps.setString(8, gender);
 			ps.setString(9, working);
 			ps.setString(10, add);
@@ -67,56 +67,51 @@ public class DfrmEnqiery extends Connections {
 		
 	}
 	public ResultSet  sec_record(int enqno){
-	String Sql="select stud_name ,stud_fname,stud_dob ,stud_age ,stud_qualification,stud_percentage,stud_gender,stud_working,stud_full_address,stud_parent_mobno,stud_student_mobno,stud_university,stud_email_id,stud_course_interested,stud_study_mode,stud_source_of_info,stud_enq_date from student_enquery where stud_enq_number=" + enqno + "";
+	String Sql="select stud_name ,stud_fname,stud_dob ,stud_age ,stud_qualification,stud_percentage,"
+			+ "stud_gender,stud_working,stud_full_address,stud_parent_mobno,stud_student_mobno,stud_university,"
+			+ "stud_email_id,stud_course_interested,stud_study_mode,stud_source_of_info,"
+			+ "stud_enq_date from student_enquery where stud_enq_number=" + enqno + "";
 		conn=Connections.getConnections();
 		try {
 			ps=conn.prepareStatement(Sql);
 			rs=ps.executeQuery();
-			/*while(rs.next()){
-			JOptionPane.showMessageDialog(null, rs.getString(1));
-			JOptionPane.showMessageDialog(null, rs.getString(2));
-			JOptionPane.showMessageDialog(null, rs.getString(3));
-			JOptionPane.showMessageDialog(null, rs.getString(4));
-			JOptionPane.showMessageDialog(null, rs.getString(5));
-			JOptionPane.showMessageDialog(null, rs.getString(6));
-			JOptionPane.showMessageDialog(null, rs.getString(7));
-			JOptionPane.showMessageDialog(null, rs.getString(8));
-			JOptionPane.showMessageDialog(null, rs.getString(9));
-			JOptionPane.showMessageDialog(null, rs.getString(10));
-			JOptionPane.showMessageDialog(null, rs.getString(11));
-			JOptionPane.showMessageDialog(null, rs.getString(12));
-			JOptionPane.showMessageDialog(null, rs.getString(13));*/
-			//}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return rs;
 	}
-	public int update_record(int enqNO,String name,String father_name,String DOB,String string,String quallifcation,int percent,String gender,String working,String add,String p_mobnum,String st_num,String university,String email,String inst_course,String Smode,String source,String date){
-		String sql="update student_enquery set stud_name='amit kumar',stud_fname='mahesh kumar gupta',stud_dob='08/03/1996',stud_age=22,stud_qualification='intermediate',stud_percentage=62,stud_gender='male',stud_working='no',stud_full_address='punaichak, patna',stud_parent_mobno='8405984767',stud_student_mobno='8864054031',stud_university='magadh university',stud_email_id='amizyx0@gmail.com',stud_course_interested='bca',stud_study_mode='regular',stud_source_of_info='other',stud_enq_date='18/02/2016' where stud_enq_number=1001";
+	public int update_record(int enqNO,String name,String father_name,String DOB,int age,String quallifcation,Double percent,
+			String gender,String working,String add,String p_mobnum,String st_num,String university,String email,
+			String inst_course,String Smode,String source,String date){
+		String sql="update student_enquery set stud_name=?,stud_fname=?,stud_dob=?,stud_age=?,"
+					+ "stud_qualification=?,stud_percentage=?,stud_gender=?,stud_working=?,stud_full_address=?,"
+				+ "stud_parent_mobno=?,stud_student_mobno=?,stud_university=?,stud_email_id=?,"
+				+ "stud_course_interested=?,stud_study_mode=?,stud_source_of_info=?,stud_enq_date=?"
+				+ " where stud_enq_number=?";
 		int status=0;
 		conn=Connections.getConnections();
 		try {
 			ps=conn.prepareStatement(sql);
-			ps.setInt(1, enqNO);
-			ps.setString(2, name);
-			ps.setString(3, father_name);
-			ps.setString(4, DOB);
-			ps.setString(5, string);
-			ps.setString(6, quallifcation);
-			ps.setInt(7, percent);
-			ps.setString(8, gender);
-			ps.setString(9, working);
-			ps.setString(10, add);
-			ps.setString(11, p_mobnum);
-			ps.setString(12, st_num);
-			ps.setString(13, university);
-			ps.setString(14, email);
-			ps.setString(15, inst_course);
-			ps.setString(16, Smode);
-			ps.setString(17, source);
-			ps.setString(18, date);
+			
+			ps.setString(1, name);
+			ps.setString(2, father_name);
+			ps.setString(3, DOB);
+			ps.setInt(4, age);
+			ps.setString(5, quallifcation);
+			ps.setDouble(6, percent);
+			ps.setString(7, gender);
+			ps.setString(8, working);
+			ps.setString(9, add);
+			ps.setString(10, p_mobnum);
+			ps.setString(11, st_num);
+			ps.setString(12, university);
+			ps.setString(13, email);
+			ps.setString(14, inst_course);
+			ps.setString(15, Smode);
+			ps.setString(16, source);
+			ps.setString(17, date);
+			ps.setInt(18, enqNO);
 			status=ps.executeUpdate();
 			
 			conn.commit();
@@ -125,8 +120,9 @@ public class DfrmEnqiery extends Connections {
 			e.printStackTrace();
 		}
 		return status;
+		}
 		
-	}
+	
 }
 
 
